@@ -2,7 +2,7 @@
 
 import { browser } from 'protractor';
 
-const expectedH1 = 'Example App Angular 5';
+const expectedH1 = 'Example App Angular';
 const expectedTitle = `${expectedH1}`;
 
 describe('Example App Angular 5 Tests', () => {
