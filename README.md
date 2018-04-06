@@ -7,7 +7,7 @@ for unit tests using Angular 5.
 
 - `npm install`
 - `npm install -g @angular/cli`
-- `ng serve --open` it will start a server on `localhost:4200`
+- `npm start` it will start a server on `localhost:4200`
 
 ## Notes
 
