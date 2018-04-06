@@ -1,0 +1,8 @@
+<h2>Features</h2>
+<button (click)="splitioService.getTreatments()">Get Treatments</button>
+<div *ngFor="let feature of splitioService.features">
+  <div *ngIf="splitioService.treatments && splitioService.treatments[feature]">
+    <strong>Feature: {{feature}}</strong>
+    {{splitioService.treatments[feature]}}
+  </div>
+</div>
