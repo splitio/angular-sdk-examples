@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Example App Angular';
+  title = 'App component is kind of dumb, used for root <router-outlet>';
 }

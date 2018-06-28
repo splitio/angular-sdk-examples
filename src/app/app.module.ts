@@ -4,20 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
+import { AppRoutingModule } from './app-routing.module';
+
 // splitio sdk
 import { SplitioService } from './splitio.service';
+import { AppResolver } from './app.resolver';
 import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
     FeaturesComponent
   ],
-  providers: [ 
+  providers: [
+    // Import the resolver
+    AppResolver,
     SplitioService
   ],
   bootstrap: [ AppComponent ]

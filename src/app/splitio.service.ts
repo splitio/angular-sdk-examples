@@ -10,26 +10,18 @@ export class SplitioService {
   isReady: boolean = false;
   treatments: SplitIO.Treatments
   features: string[] = [
-    'feature_1',
-    'feature_2',
-    'feature_3'
+    'feature_1', 'feature_2'
   ];
 
-  constructor() { }
+  constructor() {
+    this.initSdk();
+  }
 
   initSdk(): void {
-    // Running the SDK in 'off-the-grid' Mode since authorizationKey : 'localhost'
-    // To bind a non 'off-the-grid' client, inject the real API Key
     this.splitio = SplitFactory({
       core: {
-        authorizationKey: 'localhost',
+        authorizationKey: 'your-api-key',
         key: 'customer-key'
-      },
-      // In non-localhost mode, this map is ignored.
-      features: {
-        feature_1: 'off',
-        feature_2: 'on',
-        feature_3: 'v2'
       }
     });
 
@@ -39,16 +31,20 @@ export class SplitioService {
     this.verifyReady();
   }
 
+  getReadyPromise(): Promise<boolean> {
+    return this.splitClient.ready().then(()=> true).catch(() => false);
+  }
+
   private verifyReady(): void {
     const isReadyEvent = fromEvent(this.splitClient, this.splitClient.Event.SDK_READY);
 
     const subscription = isReadyEvent.subscribe({
-      next() { 
+      next() {
         this.isReady = true;
-        console.log('Sdk ready: ', this.isReady);         
+        console.log('Sdk ready: ', this.isReady);
       },
-      error(err) { 
-        console.log('Sdk error: ', err); 
+      error(err) {
+        console.log('Sdk error: ', err);
         this.isReady = false;
       }
     });
