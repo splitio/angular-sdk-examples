@@ -13,6 +13,6 @@ export class FeaturesComponent implements OnInit {
   constructor(public splitioService: SplitioService) { }
 
   ngOnInit() {
-    this.splitioService.initSdk();
+    this.splitioService.getTreatments();
   }
 }
