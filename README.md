@@ -17,6 +17,10 @@ private _initSdk(): void {
         authorizationKey: '[API KEY here]',
         key: 'Tracke type'
       },
+- If the second Split has different Traffic Type, add the second traffic type here:
+    // and the one for a different key. This will share resources with the main one but segment data.
+    this._splitAccountClient = this._factory.client('[Second Traffic Type]');
+
 - Lookup the line below and update the Split names needed:
   userFeatures: string[] = [
     '[Split1]', '[Split2]'
