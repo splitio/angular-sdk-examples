@@ -17,6 +17,9 @@ private _initSdk(): void {
         authorizationKey: '[API KEY here]',
         key: 'Tracke type'
       },
+- Lookup the line below and update the Split names needed:
+  userFeatures: string[] = [
+    '[Split1]', '[Split2]'
 
 
 
