@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { SplitFactory } from '@splitsoftware/splitio';
-import { fromEvent } from 'rxjs/observable/fromEvent';
+import { fromEvent } from 'rxjs';
 
 @Injectable()
 export class SplitioService {
 
   splitio: SplitIO.ISDK;
   splitClient: SplitIO.IClient;
-  isReady: boolean = false;
-  treatments: SplitIO.Treatments
+  isReady = false;
+  treatments: SplitIO.Treatments;
   features: string[] = [
     'feature_1',
     'feature_2',
@@ -43,12 +43,12 @@ export class SplitioService {
     const isReadyEvent = fromEvent(this.splitClient, this.splitClient.Event.SDK_READY);
 
     const subscription = isReadyEvent.subscribe({
-      next() { 
+      next() {
         this.isReady = true;
-        console.log('Sdk ready: ', this.isReady);         
+        console.log('Sdk ready: ', this.isReady);
       },
-      error(err) { 
-        console.log('Sdk error: ', err); 
+      error(err) {
+        console.log('Sdk error: ', err);
         this.isReady = false;
       }
     });
