@@ -8,7 +8,7 @@ import { SplitioService } from '../splitio.service';
 })
 export class FeaturesComponent implements OnInit {
 
-  treatments: SplitIO.Treatments
+  treatments: SplitIO.Treatments;
 
   constructor(public splitioService: SplitioService) { }
 
