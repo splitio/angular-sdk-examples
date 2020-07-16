@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular-sdk-examples": {
@@ -19,6 +19,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "allowedCommonJsDependencies": [
+              "@babel/runtime-corejs3",
+              "core-js-pure",
+              "utfx",
+              "axios"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-sdk-examples"
+    }
+  },
+  "defaultProject": "angular-sdk-examples",
+  "cli": {
+    "analytics": false
+  }
 }
