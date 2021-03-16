@@ -2,10 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
-The goal of this project is to show one way to to set up split in Angular.
+The goal of this project is to show one way to set up the Split SDK in Angular.
 
 ## Getting started
-
+_Optional:_ If `nvm` is locally installed, run `nvm i` to set the required Node version. 
 - `npm install`
 - `npm install -g @angular/cli`
 - `ng serve` will start a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
