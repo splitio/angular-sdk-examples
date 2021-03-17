@@ -23,9 +23,6 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "allowedCommonJsDependencies": [
-              "utfx"
-            ],
             "styles": [
               "src/styles.css"
             ],
