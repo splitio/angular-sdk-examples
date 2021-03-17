@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SplitFactory } from '@splitsoftware/splitio-browserjs';
+import { SplitFactory, InLocalStorage } from '@splitsoftware/splitio-browserjs';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Injectable()
@@ -45,6 +45,9 @@ export class SplitioService {
         authorizationKey: '<YOUR_SDK_BROWSER_APIKEY>',
         key: '<USER_ID>'
       },
+      storage: InLocalStorage({
+        prefix: 'TEST_PREFIX'
+      })
     });
     this.splitClient = this.splitio.client();
     // verify if sdk is initialized
