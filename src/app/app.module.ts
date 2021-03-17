@@ -17,4 +17,5 @@ import { FeaturesComponent } from './features/features.component';
   providers: [SplitioService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
