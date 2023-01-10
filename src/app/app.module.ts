@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { SplitioService } from './splitio.service';
 import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { FeaturesComponent } from './features/features.component';
   imports: [
     BrowserModule
   ],
-  providers: [SplitioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
