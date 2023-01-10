@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
   constructor(public splitService: SplitService) { }
 
   ngOnInit() {
-
     this.initSplitService();
-
   }
 
   /**

@@ -13,7 +13,6 @@ import { FeaturesComponent } from './features/features.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
