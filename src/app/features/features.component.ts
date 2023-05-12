@@ -10,10 +10,10 @@ export class FeaturesComponent {
 
   constructor(public splitService: SplitService) { }
 
-  features: string[] = [
-    'feature-A',
-    'feature-B',
-    'feature-C'
+  featureFlagss: string[] = [
+    'feature-flag-A',
+    'feature-flag-B',
+    'feature-flag-C'
   ];
 
   /**
@@ -23,7 +23,7 @@ export class FeaturesComponent {
    */
   getTreatments() {
     this.splitService.sdkReady$?.subscribe({
-      next: () => {this.treatments = this.splitService.getTreatments(this.features) },
+      next: () => {this.treatments = this.splitService.getTreatments(this.featureFlagss) },
       error: (err) => { console.log(err) }
     });
   }
