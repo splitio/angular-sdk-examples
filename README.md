@@ -11,9 +11,9 @@ _Optional:_ If `nvm` is locally installed, run `nvm i` to set the required Node 
 - `npm install -g @angular/cli`
 - `ng serve` will start a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
->_Note:_ To effectively test the SDK, you need to set the corresponding Browser [Api key](https://help.split.io/hc/en-us/articles/360020448791-JavaScript-SDK#2-instantiate-the-sdk-and-create-a-new-split-client).
->The API key is available on your *Organization Settings* page, on the *APIs* tab. Remember to choose `browser` type.
->In addition to that, you may want to create some Split/s in the admin and then update [the list of features defined in the code example](https://github.com/splitio/angular-sdk-examples/blob/efant_updateExample/src/app/splitio.service.ts#L27-L31).
+>_Note:_ To effectively test the SDK, you need to set the corresponding Browser [SDK key](https://help.split.io/hc/en-us/articles/360020448791-JavaScript-SDK#2-instantiate-the-sdk-and-create-a-new-split-client).
+>The SDK key is available on your *Organization Settings* page, on the *APIs* tab. Remember to choose `browser` type.
+>In addition to that, you may want to create some feature flags in the admin and then update [the list of feature flags defined in the code example](https://github.com/splitio/angular-sdk-examples/blob/efant_updateExample/src/app/splitio.service.ts#L27-L31).
 
 ## Further help
 

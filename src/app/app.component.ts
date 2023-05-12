@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   initSplitService(): void {
     this.splitService.init({
       core: {
-        authorizationKey: '<YOUR_SDK_BROWSER_APIKEY>',
+        authorizationKey: '<YOUR_SDK_KEY>',
         key: '<USER_ID>'
       }
     }).subscribe({
