@@ -1,6 +1,6 @@
 <h2>Features</h2>
 <button (click)="this.getTreatments()">Get Treatments</button>
-<div *ngFor="let feature of this.features">
+<div *ngFor="let feature of this.featureFlagss">
   <div *ngIf="this.treatments && this.treatments[feature]">
     <strong>{{feature}}: </strong>
     {{this.treatments[feature]}}
