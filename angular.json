@@ -119,6 +119,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-sdk-examples"
+    }
+  }
 }
