@@ -29,7 +29,9 @@ export class AppComponent implements OnInit {
         authorizationKey: '<YOUR_SDK_KEY>',
         key: '<USER_ID>'
       }
-    }).subscribe({
+    })
+
+    this.splitService.sdkReady$.subscribe({
       next: () => { console.log('Split service ready') },
       error: (err) => { console.log(err) }
     });

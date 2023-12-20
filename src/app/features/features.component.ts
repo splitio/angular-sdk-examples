@@ -7,14 +7,9 @@ import { SplitService } from '@splitsoftware/splitio-angular'
 })
 export class FeaturesComponent {
   treatments: SplitIO.Treatments
+  featureFlagss: SplitIO.SplitNames
 
   constructor(public splitService: SplitService) { }
-
-  featureFlagss: string[] = [
-    'feature-flag-A',
-    'feature-flag-B',
-    'feature-flag-C'
-  ];
 
   /**
    * Function to get and set the treatments from the Split API.
@@ -22,9 +17,7 @@ export class FeaturesComponent {
    * @returns void
    */
   getTreatments() {
-    this.splitService.sdkReady$?.subscribe({
-      next: () => {this.treatments = this.splitService.getTreatments(this.featureFlagss) },
-      error: (err) => { console.log(err) }
-    });
+    this.featureFlagss = this.splitService.getSplitNames();
+    this.treatments = this.splitService.getTreatments(this.featureFlagss)
   }
 }
