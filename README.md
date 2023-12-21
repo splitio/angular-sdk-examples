@@ -1,7 +1,7 @@
 # Angular JS SDK examples
-> Currently, the project is using Angular 13.3.10.
+> Currently, the project is using Angular 15.2.10.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1 and then updated to the version 13.3.10
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1 and then updated to the version 15.2.10
 
 The goal of this project is to show one way to set up the Split angular utilities in Angular.
 
